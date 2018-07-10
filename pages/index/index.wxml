@@ -1,0 +1,87 @@
+<!--index.wxml-->
+<view class="container">
+    <view class="m-indexHd" style="height: 162rpx;">
+        <view class="m-hd g-row">
+            <view class="m-indextop">
+                <view class="top-line">
+                    <view class="logo"></view>
+                    <view class="m-searchTop">
+                        <navigator url="../search/search" hover-class="changestyle">
+                            <view class="zw-search-link">
+                                <view class="icon-search"></view>
+                                <text class="placeholder">点击输入搜索商品</text>
+                            </view>
+                        </navigator>
+                    </view>
+                </view>
+            </view>
+            <view class="inner">
+                <view class="m-navs disflex">
+                    <view class="active">
+                        <navigator url="../product/productList/productList" hover-class="navigator-hover"><text class="txt">推荐</text></navigator>
+                    </view>
+                    <view>
+                        <navigator url="../product/productList/productList" hover-class="navigator-hover"><text class="txt">户外</text></navigator>
+                    </view>
+                    <view>
+                        <navigator url="../product/productList/productList" hover-class="navigator-hover"><text class="txt">运动</text></navigator>
+                    </view>
+                    <view>
+                        <text class="txt">瑜伽</text>
+                    </view>
+                    <view>
+                        <text class="txt">男鞋</text>
+                    </view>
+                    <view>
+                        <text class="txt">女鞋</text>
+                    </view>
+                    <view>
+                        <text class="txt">童装</text>
+                    </view>
+                    <view>
+                        <text class="txt">男装</text>
+                    </view>
+                    <view>
+                        <text class="txt">瑜伽</text>
+                    </view>
+                    <view>
+                        <text class="txt">男鞋</text>
+                    </view>
+                    <view>
+                        <text class="txt">女鞋</text>
+                    </view>
+                    <view>
+                        <text class="txt">童装</text>
+                    </view>
+                    <view>
+                        <text class="txt">男装</text>
+                    </view>
+                    <view>
+                        <text class="txt">瑜伽</text>
+                    </view>
+                    <view>
+                        <text class="txt">男鞋</text>
+                    </view>
+                    <view>
+                        <text class="txt">女鞋</text>
+                    </view>
+                    <view>
+                        <text class="txt">童装</text>
+                    </view>
+                    <view>
+                        <text class="txt">男装</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="zw-banner">
+        <swiper indicator-dots="{{indicatorDots}}" indicator-color="{{indicatorColor}}" circular="{{circular}}" indicator-active-color="{{indicatorActiveColor}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+            <block wx:for="{{banner_list}}" wx:key="i">
+                <swiper-item>
+                    <navigator url="../product/productDetail/productDetail" hover-class="changestyle"><image src="{{imgHost}}/{{item.img}}" class="slide-image" width="750" height="376" /></navigator>
+                </swiper-item>
+            </block>
+        </swiper>
+    </view>
+</view>
